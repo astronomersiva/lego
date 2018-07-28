@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'lego';
+
+const args = process.argv.slice(2);
+require('../lib/lego')(args);
