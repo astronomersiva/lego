@@ -34,7 +34,9 @@
     "fs-extra": "^7.0.0",
     "glob": "^7.1.2",
     "liquid-node": "^3.0.0",
+    "live-server": "^1.2.0",
     "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
     "postcss": "^7.0.1",
     "uglify-es": "^3.3.9"
