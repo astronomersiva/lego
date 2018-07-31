@@ -31,6 +31,7 @@
     "autoprefixer": "^9.0.1",
     "chalk": "^2.4.1",
     "cssnano": "^4.0.4",
+    "find-up": "^3.0.0",
     "fs-extra": "^7.0.0",
     "glob": "^7.1.2",
     "html-minifier": "^3.5.19",
@@ -40,6 +41,7 @@
     "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
     "postcss": "^7.0.1",
+    "sitemap": "^1.13.0",
     "uglify-es": "^3.3.9"
   }
 }
