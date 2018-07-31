@@ -33,6 +33,7 @@
     "cssnano": "^4.0.4",
     "fs-extra": "^7.0.0",
     "glob": "^7.1.2",
+    "html-minifier": "^3.5.19",
     "liquid-node": "^3.0.0",
     "live-server": "^1.2.0",
     "markdown-it": "^8.4.2",
