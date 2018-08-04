@@ -30,6 +30,7 @@
   "dependencies": {
     "autoprefixer": "^9.0.1",
     "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
     "chokidar": "^2.0.4",
     "cssnano": "^4.0.4",
     "find-up": "^3.0.0",
@@ -41,8 +42,11 @@
     "markdown-it": "^8.4.2",
     "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
+    "node-version-assets": "^1.2.2",
     "postcss": "^7.0.1",
+    "rev-hash": "^2.0.0",
     "sitemap": "^1.13.0",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "uninstall": "0.0.0"
   }
 }
