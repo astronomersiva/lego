@@ -52,6 +52,7 @@ This was a great learning experience to be honest.
 
 ### Usage
 
+* Run `lego g` to create a new site.
 * Run `lego s` to run a server.
 * Run `lego` to create an optimised build.
 
