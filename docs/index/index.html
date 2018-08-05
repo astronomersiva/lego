@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Lego</title><meta name="description" content="Lego, an opinionated static site generator built on NodeJS"><meta content="IE=edge" http-equiv="X-UA-Compatible"><link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png"><link rel="manifest" href="static/images/site.webmanifest"><link rel="mask-icon" href="static/images/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="static/images/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="static/images/browserconfig.xml"><meta name="theme-color" content="#ffffff"><meta name="keywords" content="lego,static site generator,nodejs"><meta name="author" content="Sivasubramanyam A"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="static/css/styles-307c66ee5d.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"></head><body><div class="navbar">LEGO</div><main role="main"><div class="container"><h2 class="text-center">Lego is an opinionated static site generator built with NodeJS.</h2><div class="section"><div>Having written several build tools at work over the last few years, I wanted to try my hands at rolling out a full featured static site generator. This is turning out to be a great learning experience and I hope to blog about this soon.</div></div><div class="section"><h3>Features</h3><ul><li>Uses Liquid as the templating engine.</li><li>Supports Markdown files with YAML front-matter.</li><li>Minifies and uglifies JS and CSS files with a specified <span><pre>.browserlist.rc</pre></span>.</li><li>Does asset revision of CSS and JS files.</li><li>Minifies output HTML.</li><li>Live-reload during development.</li><li>Supports including html in md by implementing a custom md syntax. For example, to include a table, <span><pre>::: include table.html :::</pre></span></li><li>Copies CNAME to build directory, so will work with GH Pages with a custom domain.</li><li>🚧 LESS and Sass support.</li><li>🚧 Extracting and inlining critical CSS.</li><li>🚧 Responsive images and lazy-loading.</li><li>🚧 Generating sitemaps.</li></ul></div><div class="section"><h3>Installation</h3><div>Run <span><pre>npm i -g @astronomersiva/lego</pre></span>.</div></div><div class="section"><h3>Usage</h3><ul><li>To create a new project, run <span><pre>lego g siteName</pre></span>.</li><li>To start the development server, run <span><pre>lego s</pre></span>.</li><li>To create an optimised build for deployment, run <span><pre>lego</pre></span>.</li></ul></div><div class="section"><h3>Contributing</h3><div><p>You are welcome to contribute!</p><p>Feel free to fork the repo or file an issue. The repository is available on <a href="https://github.com/astronomersiva/lego/">Github</a>.</p></div></div><div class="section"><h3>Directory Structure</h3><pre>
+        .
+        ├── CNAME
+        ├── build                     // contains the built site
+        ├── README.md
+        ├── layouts
+        │   ├── post.html             // will be used for markdown posts
+        │   └── tag.html              // will be used to generate tag wise listing of posts
+        ├── pages
+        │   ├── 404.html
+        │   ├── about.html            // each of these will be put under a separate folder in build
+        │   └── index.html
+        ├── posts
+        │   ├── post.md
+        │   ├── another-post.md
+        └── static
+            ├── css
+            │   └── styles.css        // possible to have sub folders
+            ├── images
+            └── js
+                └── custom-scripts.js
+        </pre></div><div class="section"><h3>License</h3><div>MIT © <a href="https://sivasubramanyam.me/">Sivasubramanyam A</a></div></div></div></main></body></html>
