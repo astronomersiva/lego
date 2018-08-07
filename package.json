@@ -1,6 +1,6 @@
 {
   "name": "@astronomersiva/lego",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A custom built static site generator that will one day power [sivasubramanyam.me](https://sivasubramanyam.me) 🏋️‍",
   "main": "index.js",
   "scripts": {
@@ -48,6 +48,7 @@
     "node-version-assets": "^1.2.2",
     "postcss": "^7.0.1",
     "rev-hash": "^2.0.0",
+    "sharp": "^0.20.5",
     "signale": "^1.2.1",
     "sitemap": "^1.13.0",
     "uglify-es": "^3.3.9",
