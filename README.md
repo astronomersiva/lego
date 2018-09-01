@@ -35,6 +35,9 @@ This was a great learning experience to be honest.
 │   ├── 404.html
 │   ├── about.html            // each of these will be put under a separate folder in build
 │   └── index.html
+├── data
+│   ├── authors.yml
+│   └── speakers.yaml         // will be available as data.authors and data.speakers
 ├── posts
 │   ├── post.md
 │   ├── another-post.md
