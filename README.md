@@ -59,6 +59,18 @@ This was a great learning experience to be honest.
 * Run `lego g` to create a new site.
 * Run `lego s` to run a server.
 * Run `lego` to create an optimised build.
+* To include an HTML in a markdown file, use ::: include table.html :::.
+* To automatically generate images for various resolutions,
+```
+::: lego-image src="static/images/${IMAGE}" res="1080,500,320" alt="alternate text" class="img-responsive center-block" :::
+```
+* lego also exposes a `isDevelopment` variable that you can use to disable certain analytics.
+For example,
+```
+{% unless isDevelopment %}
+  <!-- analytics code -->
+{% endunless %}
+```
 
 ### License
 
