@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/astronomersiva/lego.svg?branch=master)](https://travis-ci.org/astronomersiva/lego)
+
 A custom built static site generator that powers [sivasubramanyam.me](https://sivasubramanyam.me) 🏋️‍
 
 ### Why?
