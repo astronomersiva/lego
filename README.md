@@ -67,7 +67,7 @@ This was a great learning experience to be honest.
 ::: lego-image src="static/images/${IMAGE}" res="1080,500,320" alt="alternate text" class="img-responsive center-block" :::
 ```
 * lego also exposes a `isDevelopment` variable that you can use to disable certain stuff in development. For example, analytics.
-For example,
+
 ```
 {% unless isDevelopment %}
   <!-- analytics code -->
