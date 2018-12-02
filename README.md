@@ -17,6 +17,7 @@ This was a great learning experience to be honest.
 * Supports minification and uglification of JS and CSS file(with `.browserlist.rc`).
 * Does asset revision of CSS and JS files.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
+* Automatic sitemap generation.
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
 * Minifies output HTML.
 * Supports including html in md by implementing a custom md syntax. `::: include table.html :::`.
