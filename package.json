@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "@astronomersiva/sitemap-static": "^1.0.1",
-    "autoprefixer": "^9.0.1",
     "chalk": "^2.4.1",
     "chokidar": "^2.0.4",
     "cssnano": "^4.0.4",
@@ -51,6 +50,7 @@
     "markdown-it-front-matter": "^0.1.2",
     "node-version-assets": "^1.2.2",
     "postcss": "^7.0.1",
+    "postcss-preset-env": "^6.4.0",
     "rev-hash": "^2.0.0",
     "sharp": "^0.20.5",
     "signale": "^1.2.1",
