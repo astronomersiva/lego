@@ -16,7 +16,7 @@ This was a great learning experience to be honest.
 
 * Built with NodeJS.
 * Supports Liquid templates.
-* Supports minification and uglification of JS and CSS file(with `.browserlist.rc`).
+* Supports minification and uglification of JS and CSS file(with `browserslist`).
 * Does asset revision of CSS and JS files.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
 * Automatic sitemap generation.
