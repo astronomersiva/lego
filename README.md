@@ -20,6 +20,7 @@ This was a great learning experience to be honest.
 * Does asset revision of CSS and JS files.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
 * Automatic sitemap generation.
+* Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
 * Minifies output HTML.
 * Supports including html in md by implementing a custom md syntax. `::: include table.html :::`.
@@ -51,6 +52,32 @@ This was a great learning experience to be honest.
     ├── images
     └── js
         └── custom-scripts.js
+```
+
+### Configuration file
+
+Every lego project has a `lego.js` file at the root. It should have the following contents:
+
+* `url`: This is needed to generate sitemaps. Example, `'https://www.sivasubramanyam.me/'`.
+* `critical`: This can be used if critical CSS is to be inlined. Using this might significantly
+increase production build times. Takes options applicable to [critical](https://github.com/addyosmani/critical).
+Example,
+```javascript
+critical: {
+  inline: true,
+  dimensions: [
+    {
+      height: 800,
+      width: 470
+    }, {
+      height: 900,
+      width: 1200
+    }
+  ],
+  penthouse: {
+    timeout: 150000
+  }
+}
 ```
 
 ### Installation
