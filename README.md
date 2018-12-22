@@ -79,6 +79,18 @@ critical: {
   }
 }
 ```
+* `skipDirsInPostUrls`: If this option is set as `true`, the URL of generated posts will not
+include directories. For example, in this tree structure,
+```
+.
+└── posts
+    ├── travel
+    │   └── nepal.md
+    └── i-love-js.md
+```
+the URL of nepal.md will be `site.com/nepal` if this option is `true`. By default(`false`), the URL
+of this post would be `site.com/travel/nepal`. This option will be overridden if the post's front-matter
+has a `url` field.
 
 ### Installation
 
