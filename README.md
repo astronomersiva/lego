@@ -91,6 +91,17 @@ include directories. For example, in this tree structure,
 the URL of nepal.md will be `site.com/nepal` if this option is `true`. By default(`false`), the URL
 of this post would be `site.com/travel/nepal`. This option will be overridden if the post's front-matter
 has a `url` field.
+* `server`: Options for the development server. Refer [live-server](https://github.com/tapio/live-server/#usage-from-node).
+* `server.ssl`: If this option is set as `true`, lego will start an HTTPS development server using
+a self-signed certificate. Please note that self-signed certificates might not be accepted
+by many browsers by default. If you would like to use your own `cert` and `key` files, you
+can do so by passing them to this option like,
+```javascript
+ssl: {
+  key: 'server.key',
+  cert: 'server.crt'
+}
+```
 
 ### Installation
 
