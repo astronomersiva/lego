@@ -50,6 +50,7 @@
     "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
     "markdown-it-link-attributes": "^2.1.0",
+    "node-forge": "^0.7.6",
     "node-version-assets": "^1.2.2",
     "p-limit": "^2.0.0",
     "postcss": "^7.0.1",
