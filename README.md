@@ -21,6 +21,7 @@ This was a great learning experience to be honest.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
 * Automatic sitemap generation.
 * Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
+* Supports inlining assets using [inline-source](https://www.npmjs.com/package/inline-source).
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
 * Minifies output HTML.
 * Supports including html in md by implementing a custom md syntax. `::: include table.html :::`.
@@ -38,14 +39,14 @@ This was a great learning experience to be honest.
 │   └── tag.html              // will be used to generate tag wise listing of posts
 ├── pages
 │   ├── 404.html
-│   ├── about.html            // each of these will be put under a separate folder in build
+│   └── about.html            // each of these will be put under a separate folder in build
 │   └── index.html
 ├── data
 │   ├── authors.yml
 │   └── speakers.yaml         // will be available as data.authors and data.speakers
 ├── posts
 │   ├── post.md
-│   ├── another-post.md
+│   └── another-post.md
 └── static
     ├── css
     │   └── styles.css        // possible to have sub folders
@@ -91,6 +92,8 @@ include directories. For example, in this tree structure,
 the URL of nepal.md will be `site.com/nepal` if this option is `true`. By default(`false`), the URL
 of this post would be `site.com/travel/nepal`. This option will be overridden if the post's front-matter
 has a `url` field.
+* `inlineSource`: If this option is set as `true`, assets in tags that contain the `inline` attribute
+will be inlined. You can also pass options supported by [inline-source](https://www.npmjs.com/package/inline-source#usage).
 * `server`: Options for the development server. Refer [live-server](https://github.com/tapio/live-server/#usage-from-node).
 * `server.ssl`: If this option is set as `true`, lego will start an HTTPS development server using
 a self-signed certificate. Please note that self-signed certificates might not be accepted
@@ -100,6 +103,15 @@ can do so by passing them to this option like,
 ssl: {
   key: 'server.key',
   cert: 'server.crt'
+}
+```
+* `htmlMinifier` - Options for [html-minifier](https://github.com/kangax/html-minifier#options-quick-reference). Defaults are
+```javascript
+{
+  collapseWhitespace: true,
+  minifyJS: true,
+  minifyCSS: true,
+  removeComments: true
 }
 ```
 
