@@ -114,6 +114,23 @@ ssl: {
   removeComments: true
 }
 ```
+* `md`: Pass an array of block-level custom containers that can be used by the Markdown parser.
+Refer [markdown-it-container](https://github.com/markdown-it/markdown-it-container).
+```javascript
+{
+  md: {
+    containers: [
+      {
+        name: 'myCustomContainer',
+        options: {
+          validate: function(params) {}
+          render: function(tokens, idx) {}
+        }
+      }
+    ]
+  }
+}
+```
 
 ### Installation
 
