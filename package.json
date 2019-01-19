@@ -60,6 +60,7 @@
     "sharp": "^0.20.5",
     "signale": "^1.2.1",
     "terser": "^3.10.13",
+    "v8-compile-cache": "^2.0.2",
     "yaml": "^1.0.0-rc.8"
   }
 }
