@@ -12,6 +12,9 @@
   "engines": {
     "node": ">= 8"
   },
+  "resolutions": {
+    "globby": "8.0.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/astronomersiva/lego.git"
