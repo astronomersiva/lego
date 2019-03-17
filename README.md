@@ -16,9 +16,10 @@ This was a great learning experience to be honest.
 
 * Built with NodeJS.
 * Supports Liquid templates.
-* Supports minification and uglification of JS and CSS file(with `browserslist`).
-* Does asset revision of CSS, JS and image files files.
+* Supports transpilation, minification and uglification of JS and CSS file(using the provided `browserslist` to determine transpilation targets).
+* Does asset revisioning of CSS, JS and image files files.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
+* Code highlighting at build time using [highlight.js](https://highlightjs.org/).
 * Automatic sitemap generation.
 * Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
 * Supports inlining assets using [inline-source](https://www.npmjs.com/package/inline-source).

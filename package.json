@@ -43,6 +43,7 @@
     "find-up": "^3.0.0",
     "fs-extra": "^7.0.0",
     "glob": "^7.1.2",
+    "highlight.js": "^9.15.6",
     "html-minifier": "^3.5.19",
     "imagemin": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
