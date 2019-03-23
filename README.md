@@ -16,11 +16,11 @@ This was a great learning experience to be honest.
 
 * Built with NodeJS.
 * Supports Liquid templates.
-* Supports transpilation, minification and uglification of JS and CSS file(using the provided `browserslist` to determine transpilation targets).
-* Does asset revisioning of CSS, JS and image files files.
+* Supports minification and uglification of JS and CSS files(using the provided `browserslist` to determine transpilation targets).
+* Does asset revisioning of CSS, JS and image files.
 * JPG and PNG images under `static` will be optimised with `imageoptim`.
 * Code highlighting at build time using [highlight.js](https://highlightjs.org/).
-* Automatic sitemap generation.
+* Automatic sitemap and RSS feeds generation.
 * Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
 * Supports inlining assets using [inline-source](https://www.npmjs.com/package/inline-source).
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
@@ -142,6 +142,8 @@ that are already included in lego.
   ]
 }
 ```
+* `rss`: Options to pass to the RSS feeds generator. Refer [rss feedOptions](https://www.npmjs.com/package/rss#feedoptions).
+  Categories and Publishing Date will be automatically populated.
 
 ### Installation
 
@@ -158,7 +160,7 @@ that are already included in lego.
 ```
 ::: lego-image src="static/images/${IMAGE}" res="1080,500,320" alt="alternate text" class="img-responsive center-block" :::
 ```
-* lego also exposes a `isDevelopment` variable that you can use to disable certain stuff in development. For example, analytics.
+* lego also exposes an `isDevelopment` variable that you can use to disable certain stuff in development. For example, analytics.
 
 ```
 {% unless isDevelopment %}
