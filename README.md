@@ -37,7 +37,7 @@ This was a great learning experience to be honest.
 ├── README.md
 ├── layouts
 │   ├── post.html             // will be used for markdown posts
-│   └── tag.html              // will be used to generate tag wise listing of posts
+│   └── tags.html              // will be used to generate tag wise listing of posts
 ├── pages
 │   ├── 404.html
 │   └── about.html            // each of these will be put under a separate folder in build
