@@ -77,3 +77,9 @@ node_modules/
 .env
 
 # End of https://www.gitignore.io/api/node,code,macos
+
+# benchmarking
+post-*.md
+benchmarks/fixtures/lego/build
+benchmarks/fixtures/lego/.lego
+benchmarks/fixtures/jekll/_site

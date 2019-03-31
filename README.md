@@ -1,6 +1,6 @@
 # Lego [![Build Status](https://travis-ci.org/astronomersiva/lego.svg?branch=master)](https://travis-ci.org/astronomersiva/lego)
 
-A custom built static site generator that powers [sivasubramanyam.me](https://sivasubramanyam.me) 🏋️‍
+A custom built static site generator that powers [siva.dev](https://siva.dev) 🏋️‍
 
 ### Why?
 
@@ -166,6 +166,32 @@ that are already included in lego.
 {% unless isDevelopment %}
   <!-- analytics code -->
 {% endunless %}
+```
+
+### Benchmarks
+
+To run benchmarks, run
+```bash
+$ cd benchmarks
+$ yarn
+$ node generator.js
+$ node index.js
+```
+
+It will run benchmarks against `jekyll` the following data:
+
+* 500 posts
+* Each post contains 150 paragraphs.
+* Each paragraph contains 150 random words.
+* The size of each post is about 150kb.
+* lego will be run with its cache disabled.
+
+Results:
+
+```bash
+jekyll x 0.06 ops/sec ±0.79% (5 runs sampled)
+lego x 0.10 ops/sec ±0.86% (5 runs sampled)
+Fastest is lego
 ```
 
 ### License

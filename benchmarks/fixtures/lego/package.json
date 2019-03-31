@@ -1,0 +1,16 @@
+{
+  "name": "lego",
+  "scripts": {
+    "start": "lego s",
+    "build": "lego"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 1 versions",
+    "not ie 11",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@astronomersiva/lego": "^1.9.0"
+  }
+}

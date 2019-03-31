@@ -1,0 +1,15 @@
+{
+  "name": "lego-benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "random-words": "^1.1.0"
+  }
+}
