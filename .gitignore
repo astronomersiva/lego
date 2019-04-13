@@ -78,8 +78,9 @@ node_modules/
 
 # End of https://www.gitignore.io/api/node,code,macos
 
-# benchmarking
-post-*.md
+# benchmarks
+benchmarks/fixtures/**/*.md
 benchmarks/fixtures/lego/build
 benchmarks/fixtures/lego/.lego
-benchmarks/fixtures/jekll/_site
+benchmarks/fixtures/jekyll/_site
+benchmarks/fixtures/jekyll/.sass-cache
