@@ -84,3 +84,7 @@ benchmarks/fixtures/lego/build
 benchmarks/fixtures/lego/.lego
 benchmarks/fixtures/jekyll/_site
 benchmarks/fixtures/jekyll/.sass-cache
+
+# tests
+test/fixtures/dummy/.lego
+test/fixtures/dummy/build

@@ -4,7 +4,7 @@
   "description": "A custom built static site generator that will one day power [sivasubramanyam.me](https://sivasubramanyam.me) 🏋️‍",
   "main": "index.js",
   "scripts": {
-    "test": "eslint lib"
+    "test": "eslint lib && mocha"
   },
   "bin": {
     "lego": "bin/lego"
@@ -36,6 +36,8 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
+    "fixturify": "^1.2.0",
+    "mocha": "^6.1.3",
     "time-require": "^0.1.2"
   },
   "dependencies": {
