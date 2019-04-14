@@ -18,7 +18,8 @@ This was a great learning experience to be honest.
 * Supports Liquid templates.
 * Supports minification and uglification of JS and CSS files(using the provided `browserslist` to determine transpilation targets).
 * Does asset revisioning of CSS, JS and image files.
-* JPG and PNG images under `static` will be optimised with `imageoptim`.
+* Supports PostCSS plugins.
+* Images under `static` will be optimised with `imageoptim`.
 * Code highlighting at build time using [highlight.js](https://highlightjs.org/).
 * Automatic sitemap and RSS feeds generation.
 * Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
@@ -28,6 +29,29 @@ This was a great learning experience to be honest.
 * Supports including html in md by implementing a custom md syntax. `::: include table.html :::`.
 * Live-reload during development.
 * Copies CNAME to `build` directory, so will work with GH Pages.
+* Implements a cache resulting in faster builds on subsequent runs.
+
+### Installation
+
+* Run `npm i -g @astronomersiva/lego`.
+
+### Usage
+
+* Run `lego g siteName` to create a new site.
+* Run `lego s` / `lego serve` to run a server.
+* Run `lego b` / `lego build` to create an optimised build.
+* To include an HTML in a markdown file, use ::: include table.html :::.
+* To automatically generate images for various resolutions,
+```
+::: lego-image src="static/images/${IMAGE}" res="1080,500,320" alt="alternate text" class="img-responsive center-block" :::
+```
+* lego also exposes an `isDevelopment` variable that you can use to disable certain stuff in development. For example, analytics.
+
+```
+{% unless isDevelopment %}
+  <!-- analytics code -->
+{% endunless %}
+```
 
 ### Directory structure
 
@@ -37,7 +61,7 @@ This was a great learning experience to be honest.
 ├── README.md
 ├── layouts
 │   ├── post.html             // will be used for markdown posts
-│   └── tags.html              // will be used to generate tag wise listing of posts
+│   └── tags.html             // will be used to generate tag wise listing of posts
 ├── pages
 │   ├── 404.html
 │   └── about.html            // each of these will be put under a separate folder in build
@@ -145,28 +169,6 @@ that are already included in lego.
 * `rss`: Options to pass to the RSS feeds generator. Refer [rss feedOptions](https://www.npmjs.com/package/rss#feedoptions).
   Categories and Publishing Date will be automatically populated.
 
-### Installation
-
-* Install `npm` and `Node`.
-* Run `npm i -g @astronomersiva/lego`.
-
-### Usage
-
-* Run `lego g` to create a new site.
-* Run `lego s` to run a server.
-* Run `lego` to create an optimised build.
-* To include an HTML in a markdown file, use ::: include table.html :::.
-* To automatically generate images for various resolutions,
-```
-::: lego-image src="static/images/${IMAGE}" res="1080,500,320" alt="alternate text" class="img-responsive center-block" :::
-```
-* lego also exposes an `isDevelopment` variable that you can use to disable certain stuff in development. For example, analytics.
-
-```
-{% unless isDevelopment %}
-  <!-- analytics code -->
-{% endunless %}
-```
 
 ### Benchmarks
 
@@ -175,7 +177,7 @@ To run benchmarks, run
 $ cd benchmarks
 $ yarn
 $ node generator.js
-$ node index.js
+$ node --max-old-space-size=4096 index.js
 ```
 
 It will run benchmarks against `jekyll` the following data:
@@ -185,13 +187,17 @@ It will run benchmarks against `jekyll` the following data:
 * Each paragraph contains 150 random words.
 * The size of each post is about 150kb.
 * lego will be run with its cache disabled.
+* No static files are present.
+
+**While jekyll produces only a build, lego does HTML minification as well.**
 
 Results:
 
 ```bash
-jekyll x 0.06 ops/sec ±0.79% (5 runs sampled)
-lego x 0.10 ops/sec ±0.86% (5 runs sampled)
-Fastest is lego
+jekyll x 0.04 ops/sec ±6.71% (5 runs sampled)
+lego without cache x 0.06 ops/sec ±3.98% (5 runs sampled)
+lego with cache x 0.06 ops/sec ±12.94% (5 runs sampled)
+Fastest is lego without cache
 ```
 
 ### License

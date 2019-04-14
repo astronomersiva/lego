@@ -8,7 +8,6 @@ const writeFile = promisify(fs.writeFile);
 async function generator(outputBasePath, layout) {
   let promises = [];
   for (let i = 0; i < 500; i++) {
-    promises.push()
     let contents = `---\ntitle: Post ${i}\n${layout ? `layout: ${layout}\n` : ''}---\n`;
 
     let paras = 150;
