@@ -35,7 +35,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-standard": "^4.0.0",
     "fixturify": "^1.2.0",
     "mocha": "^6.1.3",
     "time-require": "^0.1.2"
