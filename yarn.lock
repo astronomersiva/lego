@@ -3179,8 +3179,8 @@ linkify-it@^2.0.0:
     uc.micro "^1.0.1"
 
 liquid-node@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/liquid-node/-/liquid-node-3.0.0.tgz#9821198bd0b24e7b830e74675c74f2481caa23bd"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/liquid-node/-/liquid-node-3.0.1.tgz#16a7333f7f7229cd94ae06bd44ccd6249167c8d5"
   dependencies:
     strftime "~0.9.2"
 
