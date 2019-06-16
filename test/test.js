@@ -4,6 +4,20 @@ const fs = require('fs');
 const fixturify = require('fixturify');
 const { execSync } = require('child_process');
 
+function runLego(fixture) {
+  let fixturePath = path.join(process.cwd(), 'test', 'fixtures', fixture);
+  process.chdir(fixturePath);
+  execSync('../../../bin/lego b');
+}
+
+function getExpectedOutput() {
+  return JSON.parse(fs.readFileSync('expected-output.json'));
+}
+
+function getCurrentOutput() {
+  return fixturify.readSync('build');
+}
+
 describe('lego', function() {
   this.timeout(60 * 1000);
 
@@ -13,72 +27,55 @@ describe('lego', function() {
 
   describe('build', function() {
     it('should build the project with cache disabled', async function() {
-      let fixturePath = path.join(process.cwd(), 'test', 'fixtures', 'dummy');
-      process.chdir(fixturePath);
-
       process.env.SKIP_CACHE = 'true';
-      execSync('../../../bin/lego b');
+      runLego('dummy');
 
-      let expectedOutput = JSON.parse(fs.readFileSync('expected-output.json'));
-      let actualOutput = fixturify.readSync('build');
+      let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
 
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
 
     it('should build the project with cache enabled', async function() {
       delete process.env.SKIP_CACHE;
+      runLego('dummy');
 
-      let fixturePath = path.join(process.cwd(), 'test', 'fixtures', 'dummy');
-      process.chdir(fixturePath);
-
-      execSync('../../../bin/lego b');
-
-      let expectedOutput = JSON.parse(fs.readFileSync('expected-output.json'));
-      let actualOutput = fixturify.readSync('build');
-
-      assert.deepStrictEqual(expectedOutput, actualOutput);
-
-      // build again with cache
-      execSync('../../../bin/lego b');
-      actualOutput = fixturify.readSync('build');
+      let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
 
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
 
     it('should build the project with a pre-existing cache', async function() {
       delete process.env.SKIP_CACHE;
+      runLego('dummy');
 
-      let fixturePath = path.join(process.cwd(), 'test', 'fixtures', 'dummy');
-      process.chdir(fixturePath);
+      let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
 
+      assert.deepStrictEqual(expectedOutput, actualOutput);
+
+      // build again with cache
       execSync('../../../bin/lego b');
-
-      let expectedOutput = JSON.parse(fs.readFileSync('expected-output.json'));
-      let actualOutput = fixturify.readSync('build');
+      actualOutput = getCurrentOutput();
 
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
 
     it('should build the project with categories in posts enabled', async function() {
-      let fixturePath = path.join(process.cwd(), 'test', 'fixtures', 'categories');
-      process.chdir(fixturePath);
+      runLego('categories');
 
-      execSync('../../../bin/lego b');
-
-      let actualOutput = fixturify.readSync('build');
-      let expectedOutput = JSON.parse(fs.readFileSync('expected-output.json'));
+      let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
 
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
 
     it('should build the project with categories in posts disabled', async function() {
-      let fixturePath = path.join(process.cwd(), 'test', 'fixtures', 'no-categories');
-      process.chdir(fixturePath);
+      runLego('no-categories');
 
-      execSync('../../../bin/lego b');
-
-      let actualOutput = fixturify.readSync('build');
-      let expectedOutput = JSON.parse(fs.readFileSync('expected-output.json'));
+      let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
 
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
