@@ -3791,8 +3791,8 @@ node-environment-flags@1.0.5:
     semver "^5.7.0"
 
 node-forge@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.8.4.tgz#d6738662b661be19e2711ef01aa3b18212f13030"
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.8.5.tgz#57906f07614dc72762c84cef442f427c0e1b86ee"
 
 node-pre-gyp@^0.10.0:
   version "0.10.3"
