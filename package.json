@@ -54,7 +54,7 @@
     "html-minifier": "^4.0.0",
     "imagemin": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "inline-source": "^6.1.8",
     "liquid-node": "^3.0.0",
     "live-server": "^1.2.0",
