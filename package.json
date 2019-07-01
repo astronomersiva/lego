@@ -52,7 +52,7 @@
     "glob": "^7.1.2",
     "highlight.js": "^9.15.6",
     "html-minifier": "^4.0.0",
-    "imagemin": "^6.0.0",
+    "imagemin": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
     "inline-source": "^6.1.8",
