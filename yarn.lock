@@ -5941,8 +5941,8 @@ tempy@^0.2.1:
     unique-string "^1.0.0"
 
 terser@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.1.2.tgz#b2656c8a506f7ce805a3f300a2ff48db022fa391"
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.1.4.tgz#4478b6a08bb096a61e793fea1a4434408bab936c"
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
