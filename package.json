@@ -67,7 +67,6 @@
     "node-version-assets": "^1.2.2",
     "p-limit": "^2.0.0",
     "postcss": "^7.0.1",
-    "postcss-preset-env": "^6.4.0",
     "rev-hash": "^3.0.0",
     "rss": "^1.2.2",
     "sharp": "^0.23.0",

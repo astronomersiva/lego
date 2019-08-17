@@ -156,8 +156,7 @@ Refer [markdown-it-container](https://github.com/markdown-it/markdown-it-contain
   }
 }
 ```
-* `postCSSPlugins`: An array of PostCSS plugins. These will be used in addition to `cssnano` and `postcss-preset-env`
-that are already included in lego.
+* `postCSSPlugins`: An array of PostCSS plugins. These will be used in addition to `cssnano` that is already included in lego.
 ```javascript
 {
   postCSSPlugins: [
