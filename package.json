@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/astronomersiva/lego#readme",
   "devDependencies": {
-    "eslint": "^5.2.0",
+    "eslint": "^6.2.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^9.1.0",
