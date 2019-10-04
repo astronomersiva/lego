@@ -1,21 +1,16 @@
 # Lego [![Build Status](https://travis-ci.org/astronomersiva/lego.svg?branch=master)](https://travis-ci.org/astronomersiva/lego)
 
-A custom built static site generator that powers [siva.dev](https://siva.dev) 🏋️‍
+A fast Static Site Generator that generates optimised, performant websites.
 
 ### Why?
 
 Having written several build tools at work over the last few years, I wanted to try my hands at
-rolling out a full featured static site generator. I had been using Flask earlier to run several
-applications and I also used that to power my site. Over the years, those applications were
-decommissioned but the static site remained. It was getting increasingly difficult to maintain
-a static site on Flask and I wanted to see what all it takes to build a static site generator.
-
-This was a great learning experience to be honest.
+rolling out a full featured static site generator. Honestly, I was too bored.
 
 ### Tell me more
 
 * Built with NodeJS.
-* Supports Liquid templates.
+* Supports Nunjucks and Liquid templates.
 * Supports minification and uglification of JS and CSS files(using the provided `browserslist` to determine transpilation targets).
 * Does asset revisioning of CSS, JS and image files.
 * Supports PostCSS plugins.
@@ -25,7 +20,7 @@ This was a great learning experience to be honest.
 * Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
 * Supports inlining assets using [inline-source](https://www.npmjs.com/package/inline-source).
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
-* Minifies output HTML.
+* Minifies the output HTML.
 * Supports including html in md by implementing a custom md syntax. `::: include table.html :::`.
 * Live-reload during development.
 * Copies CNAME to `build` directory, so will work with GH Pages.
@@ -105,7 +100,7 @@ critical: {
   }
 }
 ```
-* `skipDirsInPostUrls`: If this option is set as `true`, the URL of generated posts will not
+* `flatUrls`: If this option is set as `true`, the URL of generated posts will not
 include directories. For example, in this tree structure,
 ```
 .
@@ -181,7 +176,8 @@ $ node --max-old-space-size=4096 index.js
 
 It will run benchmarks against `jekyll` the following data:
 
-* 500 posts
+* Uses Nunjucks as the templating language.
+* 500 posts.
 * Each post contains 150 paragraphs.
 * Each paragraph contains 150 random words.
 * The size of each post is about 150kb.
@@ -193,10 +189,10 @@ It will run benchmarks against `jekyll` the following data:
 Results:
 
 ```bash
-jekyll x 0.04 ops/sec ±6.71% (5 runs sampled)
-lego without cache x 0.06 ops/sec ±3.98% (5 runs sampled)
-lego with cache x 0.06 ops/sec ±12.94% (5 runs sampled)
-Fastest is lego without cache
+jekyll x 0.04 ops/sec ±3.48% (5 runs sampled)
+lego without cache x 0.24 ops/sec ±11.03% (5 runs sampled)
+lego with cache x 0.35 ops/sec ±2.36% (5 runs sampled)
+Fastest is lego with cache
 ```
 
 ### License
