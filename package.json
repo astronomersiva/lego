@@ -1,6 +1,6 @@
 {
   "name": "@astronomersiva/lego",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "description": "A fast Static Site Generator that generates optimised, performant websites.",
   "main": "index.js",
   "scripts": {
