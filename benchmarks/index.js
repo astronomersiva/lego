@@ -1,15 +1,15 @@
 const Benchmark = require('benchmark');
 const { execSync } = require('child_process');
 
-const suite = new Benchmark.Suite; // eslint-ignore-line new-parens
+const suite = new Benchmark.Suite(); // eslint-ignore-line new-parens
 
 // add tests
 suite.add('jekyll', function() {
   execSync(`cd fixtures/jekyll && rm -rf _site && bundle exec jekyll build`)
 }).add('lego without cache', function() {
-  execSync(`cd fixtures/lego && rm -rf build && SKIP_CACHE=t lego`)
+  execSync(`cd fixtures/lego && rm -rf build && SKIP_CACHE=t lego s`)
 }).add('lego with cache', function() {
-  execSync(`cd fixtures/lego && rm -rf build && lego`)
+  execSync(`cd fixtures/lego && rm -rf build && lego s`)
 }).on('cycle', function(event) {
   console.log(String(event.target));
 }).on('complete', function() {
