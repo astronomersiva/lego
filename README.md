@@ -2,22 +2,19 @@
 
 A fast Static Site Generator that generates optimised, performant websites.
 
-### Why?
-
-Having written several build tools at work over the last few years, I wanted to try my hands at
-rolling out a full featured static site generator. Honestly, I was too bored.
+![Screenshot](lego-demo.gif)
 
 ### Tell me more
 
 * Built with NodeJS.
 * Supports Nunjucks and Liquid templates.
-* Supports minification and uglification of JS and CSS files(using the provided `browserslist` to determine transpilation targets).
+* Minifies and uglifies JS files(with terser) and autoprefixes and minifies CSS(with PostCSS) files using the provided `browserslist` to determine transpilation targets.
 * Does asset revisioning of CSS, JS and image files.
 * Supports PostCSS plugins.
 * Images under `static` will be optimised with `imageoptim`.
 * Code highlighting at build time using [highlight.js](https://highlightjs.org/).
 * Automatic sitemap and RSS feeds generation.
-* Supports extracting and inlining critical CSS with [critical](https://github.com/addyosmani/critical).
+* Extracts and inlines critical CSS with [critical](https://github.com/addyosmani/critical).
 * Supports inlining assets using [inline-source](https://www.npmjs.com/package/inline-source).
 * Generates images for various resolutions and automatically inserts `picture` elements with the corresponding `source` elements.
 * Minifies the output HTML.
