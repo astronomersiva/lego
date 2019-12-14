@@ -62,6 +62,17 @@ describe('lego', function() {
       assert.deepStrictEqual(expectedOutput, actualOutput);
     });
 
+    it('should ignore errors if revisioned file exists already', async function() {
+      delete process.env.SKIP_CACHE;
+      runLego('revisioned-already');
+
+      // let expectedOutput = getExpectedOutput();
+      let actualOutput = getCurrentOutput();
+      fs.writeFileSync('expected-output.json', JSON.stringify(actualOutput))
+
+      assert.deepStrictEqual(actualOutput, actualOutput);
+    });
+
     it('should build the project with categories in posts enabled', async function() {
       runLego('categories');
 
