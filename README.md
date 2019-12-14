@@ -1,4 +1,4 @@
-# Lego [![Build Status](https://travis-ci.org/astronomersiva/lego.svg?branch=master)](https://travis-ci.org/astronomersiva/lego)
+# Lego
 
 A fast Static Site Generator that generates optimised, performant websites.
 
