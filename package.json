@@ -65,7 +65,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
-    "markdown-it-link-attributes": "^2.1.0",
+    "markdown-it-link-attributes": "^3.0.0",
     "node-forge": "^0.9.1",
     "node-version-assets": "^1.2.2",
     "nunjucks": "^3.2.0",
