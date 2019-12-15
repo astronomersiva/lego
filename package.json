@@ -62,7 +62,7 @@
     "liquid-node": "^3.0.0",
     "live-server": "^1.2.0",
     "lodash.clonedeep": "^4.5.0",
-    "markdown-it": "^9.0.1",
+    "markdown-it": "^10.0.0",
     "markdown-it-container": "^2.0.0",
     "markdown-it-front-matter": "^0.1.2",
     "markdown-it-link-attributes": "^2.1.0",
