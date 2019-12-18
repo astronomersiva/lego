@@ -1,4 +1,6 @@
 # Lego
+[![Build Status](https://github.com/astronomersiva/lego/workflows/test/badge.svg)](https://github.com/astronomersiva/lego/actions?query=workflow%3Atest)
+
 
 A fast Static Site Generator that generates optimised, performant websites.
 
