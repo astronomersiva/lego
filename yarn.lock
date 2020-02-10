@@ -1420,9 +1420,9 @@ date-time@^0.1.1:
   integrity sha1-7S9tk9l5DOL9ZtW1/z7dW7y/Owc=
 
 dayjs@^1.8.16:
-  version "1.8.16"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.16.tgz#2a3771de537255191b947957af2fd90012e71e64"
-  integrity sha512-XPmqzWz/EJiaRHjBqSJ2s6hE/BUoCIHKgdS2QPtTQtKcS9E4/Qn0WomoH1lXanWCzri+g7zPcuNV4aTZ8PMORQ==
+  version "1.8.20"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.20.tgz#724a5cb6ad1f6fc066b0bd9a800dedcc7886f19e"
+  integrity sha512-mH0MCDxw6UCGJYxVN78h8ugWycZAO8thkj3bW6vApL5tS0hQplIDdAQcmbvl7n35H0AKdCJQaArTrIQw2xt4Qg==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
