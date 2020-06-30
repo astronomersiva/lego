@@ -3,9 +3,9 @@
 
 
 "@astronomersiva/sitemap-static@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@astronomersiva/sitemap-static/-/sitemap-static-1.0.1.tgz#08b80d483c04c5893847ca1341821e18d6432091"
-  integrity sha512-Vg9aR273pHkmx1AvzYm+Qiqa3Py7KEVBae4h9U7Ql+YWX8B4Iz0W7Gkz8MekgIhMGSRHGzx9ga8xNt9D3EVMug==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@astronomersiva/sitemap-static/-/sitemap-static-1.1.0.tgz#5a78a00d18f6142d83868939bfde7fda7609886d"
+  integrity sha512-WBWJ3beCR01vCwJ9oTll2eSyMXoZSMINzOtd9rMKJ259KIvsuj/E2y8qU/Iuc0W3oi6qr3dVXhtqZv93bgGHrg==
   dependencies:
     findit "~2.0.0"
     minimist "1.2.0"
