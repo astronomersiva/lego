@@ -58,6 +58,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
     "inline-source": "^7.1.0",
+    "instant.page": "^2.0.1",
     "js-yaml": "^3.13.1",
     "liquid-node": "^3.0.0",
     "live-server": "^1.2.0",
