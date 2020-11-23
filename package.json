@@ -76,7 +76,7 @@
     "sanitize-filename": "^1.6.3",
     "sharp": "^0.23.0",
     "signale": "^1.2.1",
-    "terser": "^4.0.0",
+    "terser": "^5.5.0",
     "v8-compile-cache": "^2.0.2"
   }
 }
