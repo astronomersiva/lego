@@ -133,9 +133,12 @@ ssl: {
   removeComments: true
 }
 ```
-* `md`: Pass an array of block-level custom containers that can be used by the Markdown parser.
-Refer [markdown-it-container](https://github.com/markdown-it/markdown-it-container).
+* `md`: You can pass an array of plugins or pass an array of block-level custom containers
+that can be used by the Markdown parser. Refer [markdown-it-container](https://github.com/markdown-it/markdown-it-container).
 ```javascript
+const emoji = require('markdown-it-emoji');
+const toc = require('markdown-it-table-of-contents');
+
 {
   md: {
     containers: [
@@ -146,6 +149,14 @@ Refer [markdown-it-container](https://github.com/markdown-it/markdown-it-contain
           render: function(tokens, idx) {}
         }
       }
+    ],
+    plugins: [
+      emoji,
+      [
+        toc, {
+          containerClass: 'toc',
+        }
+      ]
     ]
   }
 }
